@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MACHINE PROBLEM 2.3 – RESTAURANT: MULTI-DIMENSIONAL ARRAY</title>
+</head>
+<body>
+  <h3>CUSTOMER RECEIPT</h3>
+    {% for ctr in range(customer|length) %}
+        <p>Customer Number: {{ customer[ctr][0] }}</p>
+        <p>Customer Name: {{ customer[ctr][2] }} {{ customer[ctr][1] }}</p>
+        <p>Customer Type: {{ customer[ctr][3]}}</p>
+        <p>Total Amount: {{ customer[ctr][4]}}</p>
+        {% set taxCharge = customer[ctr][4] * customer[ctr][5] %}
+        <p>Tax Charges: {{ taxCharge }}</p>
+        {% set serviceCharge = customer[ctr][4] * customer[ctr][6] %}
+        <p>Service Charges: {{ serviceCharge }}</p>
+        {% set totalCharge = taxCharge + serviceCharge %}
+        <p>Total Charges: {{ totalCharge }}</p>
+        {% set totalDiscount = customer[ctr][4] * customer[ctr][7] %}
+        <p>Total Discount: {{ "{:.1f}".format(totalDiscount) }}</p>
+        {% set amountToPay = (customer[ctr][4] + totalCharge) - totalDiscount %}
+        <p>Amount to Pay: {{ amountToPay }}</p>
+        <br>
+     {% endfor %}
+      <p>Programmed by: {{ progby }}</p>
+</body>
+</html>

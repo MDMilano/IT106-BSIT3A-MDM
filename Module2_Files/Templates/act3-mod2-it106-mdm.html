@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ACTIVITY 3 – LOOPINGS AND SINGLE DIMENSIONAL ARRAY</title>
+</head>
+<body>
+    <p><b>LIST OF YEAR LEVEL</b></p>
+    {% for lvlitems in level %}
+          <ul>
+              <li>{{ level[lvlitems] }}</li>
+          </ul>
+     {% endfor %}
+    <br>
+
+    <p><b>LIST OF OFFERED COURSES</b></p>
+    {% for coritms in cors %}
+        <ul>
+          <li>{{ cors[coritms] }}</li>
+        </ul>
+     {% endfor %}
+    <br>
+
+    <p><b>GRADE SLIPS</b></p>
+    {% for ctr in range(lname|length) %}
+        <p>Student Name: {{ lname[ctr] }} , {{ fname[ctr] }}</p>
+        <p>Student Level: {{ level.First }}</p>
+        <p>Student Course: {{ cors.BSCS }}</p>
+        <p>Prelim Grade: {{ pre[ctr] }}</p>
+        <p>Midterm Grade: {{ mid[ctr] }}</p>
+        <p>Final Grade: {{ fin[ctr] }}</p>
+        <p>Subject Grade: {{ (pre[ctr]|float + mid[ctr]|float + fin[ctr]|float)/3 }}</p>
+        <br>
+     {% endfor %}
+    <br>
+
+    <p>Programmed by: {{ progBy }}</p>
+</body>
+</html>

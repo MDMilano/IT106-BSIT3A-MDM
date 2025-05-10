@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ACTIVITY 2 - TEMPLATES AND CONTROL STATEMENTS VERSION 2</title>
+</head>
+<body>
+<p><b>GRADE SLIP</b></p>
+    <p>Student Name: {{ fullName }}</p>
+    <p>Student Course: {{ cors }}</p>
+    <p>Prelim Grade: {{ pre }}</p>
+    <p>Midterm Grade: {{ mid }}</p>
+    <p>Final Grade: {{ fin }}</p>
+
+	{% set dblSGrade =  (pre * 0.30)  + (mid * 0.30) + (fin * 0.40) %}
+    <p>Subject Grade: {{ dblSGrade }}</p>
+
+	{%   if dblSGrade > 74:  %}
+         <p>Remarks: Pasado </p>
+     {% else: %}
+        <p>Remarks: Palyado </p>
+     {% endif %}
+
+	{% if dblSGrade > 97 and dblSGrade <= 100:  %}
+        <p>Ratings: {{ dblSGrade }} Excellent </p>
+   {% elif dblSGrade > 91 and dblSGrade <= 97:  %}
+        <p>Ratings: {{ dblSGrade }} Very Good </p>
+   {% elif dblSGrade > 82 and dblSGrade <= 91:  %}
+        <p>Ratings: {{ dblSGrade }} Good </p>
+   {% elif dblSGrade > 77 and dblSGrade <= 82:  %}
+        <p>Ratings: {{ dblSGrade }} Fair </p>
+   {% elif dblSGrade > 75 and dblSGrade <= 77:  %}
+        <p>Ratings: {{ dblSGrade }} Satisfactory </p>
+   {% else %}
+        <p>Ratings: {{ dblSGrade }} Poor </p>
+    {% endif %}
+    <br>
+
+    <br>
+    <p>Programmed by: {{ progBy }}</p>
+</body>
+</html>

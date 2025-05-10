@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ACTIVITY 4 – LOOPINGS AND MULTI DIMENSIONAL ARRAY</title>
+</head>
+<body>
+  <p><b>GRADE SLIPS</b></p>
+    {% for ctr in range(studgrade|length) %}
+        <p>Student Name: {{ studgrade[ctr][0] }} , {{ studgrade[ctr][1] }}</p>
+        <p>Student Level: {{ studgrade[ctr][2] }}</p>
+        <p>Student Course: {{ studgrade[ctr][3] }}</p>
+        <p>Prelim Grade: {{ studgrade[ctr][4] }}</p>
+        <p>Midterm Grade: {{ studgrade[ctr][5] }}</p>
+        <p>Final Grade: {{ studgrade[ctr][6] }}</p>
+        <p>Subject Grade: {{ (studgrade[ctr][4]|float + studgrade[ctr][5]|float +
+        studgrade[ctr][6]|float)/3 }}</p>
+        <br>
+     {% endfor %}
+    <br>
+
+    <p>Programmed by: {{ progBy }}</p>
+</body>
+</html>

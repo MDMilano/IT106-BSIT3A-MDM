@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MACHINE PROBLEM 2.1 – HOSPITAL: CONTROL STATEMENTS</title>
+  <style>
+    table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient Number</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Age</th>
+                <th>Age Group Name</th>
+                <th>Room Type</th>
+                <th>Rate</th>
+                <th>No. Of Days</th>
+                <th>Laboratory Charges</th>
+                <th>Extra Charges</th>
+                <th>Room Charge</th>
+                <th>Total Amount</th>
+                <th>Health Insurance</th>
+                <th>PhilHealth</th>
+                <th>SSS</th>
+                <th>Total Discount</th>
+                <th>Amount To Pay</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ctr in range(pnum|length) %}
+            <tr>
+                  <td>{{ pnum[ctr] }}</td>
+                  <td>{{ lname[ctr] }}</td>
+                  <td>{{ fname[ctr] }}</td>
+                  <td>{{ age[ctr] }}</td>
+                  <td>{{ agegroup[ctr] }}</td>
+                  <td>{{ rtype[ctr] }}</td>
+                  <td>{{ rpday[ctr] }}</td>
+                  <td>{{ nodays[ctr] }}</td>
+                  <td>{{ labcharge[ctr] }}</td>
+                  <td>{{ extcharge[ctr] }}</td>
+                  <td>{{ rpday[ctr] * nodays[ctr] }}</td>
+                  <td>{{ (rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr] }}</td>
+                  <td>{{ ((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.05 }}</td>
+                  <td>{{ ((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.06 }}</td>
+                  <td>{{ ((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.07 }}</td>
+                  <td>{{ ((((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.05) + (((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.06) + (((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.07)) }}</td>
+                  <td>{{ ((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) - (((((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.05) + (((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.06) + (((rpday[ctr] * nodays[ctr]) + labcharge[ctr] + extcharge[ctr]) * 0.07))) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Programmed by: {{ progby }}</p>
+</body>
+</html>

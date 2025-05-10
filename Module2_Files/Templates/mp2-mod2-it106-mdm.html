@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MACHINE PROBLEM 2.2 - HOTEL: LOOPS AND SINGLE ARRAY</title>
+</head>
+<body>
+    <h3>Room Types</h3>
+        {% for ctr in rtype%}
+        <ul>
+            <li>{{ rtype[ctr] }}</li>
+        </ul>
+        {% endfor %}
+    <br>
+    <h3>Customer Receipts</h3>
+    {% for ctr in range(enum|length) %}
+        <p>Customer Number: {{ enum[ctr] }}</p>
+        <p>Customer Name: {{ fname[ctr] }} {{ lname[ctr] }}</p>
+        <p>Room Type: {{ rtype.ER }}</p>
+        <p>Rate Per Day: {{ rpday[ctr] }}</p>
+        <p>Rate Per Hour: {{ rphour[ctr] }}</p>
+        <p>No. of Days: {{ nodays[ctr] }}</p>
+        <p>Extended Hours: {{ ehours[ctr] }}</p>
+        <p>Extra Amenities: {{ eamenities[ctr] }}</p>
+        <p>Total Amount: {{ tamount[ctr] }}</p>
+        <br>
+    {% endfor %}
+    <p>Programmed by: {{ progby }}</p>
+</body>
+</html>

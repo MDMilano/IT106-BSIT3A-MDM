@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PRELIM EXAMINATION HANDS-ON PYTHON DEVELOPMENT</title>
+</head>
+<body>
+    <h3>EMPLOYEE PAYSLIPS</h3>
+    {% for ctr in range(customer|length) %}
+        <p>Customer Number: {{ customer[ctr][0] }}</p>
+        <p>Customer Name: {{ customer[ctr][2] }} {{ customer[ctr][1] }}</p>
+        <p>Tax Marital Code: {{ customer[ctr][3]}}</p>
+        <p>Rate Per Hour: {{ customer[ctr][4]}}</p>
+        <p>No. Of Hours Work: {{ customer[ctr][5] }}</p>
+        <p>No. Of Hours Late: {{ customer[ctr][6] }}</p>
+        <p>No. Of Hours OT: {{ customer[ctr][7] }}</p>
+        {% set netPay = ((customer[ctr][5] + customer[ctr][7]) - customer[ctr][6]) *  customer[ctr][4] %}
+        <p>Net Pay: {{ netPay }}</p>
+        {% if netPay < 10957 %}
+            {% set salaryIncomeClass = "Poor" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% elif netPay > 10957 and netPay < 21914 %}
+            {% set salaryIncomeClass = "Low Income" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% elif netPay > 21914 and netPay < 43828 %}
+            {% set salaryIncomeClass = "Lower Middle" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% elif netPay > 43828 and netPay < 76669 %}
+            {% set salaryIncomeClass = "Middle Income" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% elif netPay > 76669 and netPay < 131484 %}
+            {% set salaryIncomeClass = "Upper Middle" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% elif netPay > 131484 and netPay < 219140 %}
+            {% set salaryIncomeClass = "Upper But Not Rich" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% else %}
+            {% set salaryIncomeClass = "Rich" %}
+            <p>Salary Income Class: {{salaryIncomeClass}}</p>
+        {% endif %}
+
+        <br>
+     {% endfor %}
+      <p>Programmed by: {{ progby }}</p>
+</body>
+</html>
