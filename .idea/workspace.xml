@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="" />
+    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/IT106-BSIT3A-MDM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IT106-BSIT3A-MDM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3_Files/.idea/Module3_Files.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/.idea/Module3_Files.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +21,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -33,8 +40,10 @@
     &quot;Python.act2-mod3-it106-mdm.executor&quot;: &quot;Run&quot;,
     &quot;Python.pre-exm-it106-mdm.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/IT106-BSIT3A-MDM&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denre/PycharmProjects/IT106-BSIT3A-MDM&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
@@ -116,7 +125,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
+        <option value="bundled-python-sdk-2ee2454479a3-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.122" />
       </set>
     </attachedChunks>
   </component>
