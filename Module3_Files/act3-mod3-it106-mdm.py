@@ -7,51 +7,51 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         # GET USER INPUT
-        strID = request.form["CustomerID"]
-        strName = request.form["CustomerName"]
+        strMDMID = request.form["CustomerID"]
+        strMDMName = request.form["CustomerName"]
 
         # GET SELECT RADIOBUTTON
-        strOrder = request.form["order"]
-        if strOrder == "Hamburger":
-            orders = 50
-        elif strOrder == "Cheese Burger":
-            orders = 100
-        elif strOrder == "Big MacJabee":
-            orders = 150
+        strMDMOrder = request.form["order"]
+        if strMDMOrder == "Hamburger":
+            ordersMDM = 50
+        elif strMDMOrder == "Cheese Burger":
+            ordersMDM = 100
+        elif strMDMOrder == "Big MacJabee":
+            ordersMDM = 150
 
         # GET SELECTED CHECKBOXES
         if request.form.get("patty", False):
-            patty = 25
+            pattyMDM = 25
         else:
-            patty = 0
+            pattyMDM = 0
 
         if request.form.get("coles", False):
-            coles = 50
+            colesMDM = 50
         else:
-            coles = 0
+            colesMDM = 0
 
         if request.form.get("hamegg", False):
-            hamegg = 100
+            hameggMDM = 100
         else:
-            hamegg = 0
+            hameggMDM = 0
 
         # GET SELECTED DRINKS
-        strDrinks = request.form["drinks"]
-        if strDrinks == "SOFTDRINKS 30.00":
-            drinks = 30
-        elif strDrinks == "COFFEE 40.00":
-            drinks = 40
-        elif strDrinks == "MANGO JUICE 50.00":
-            drinks = 50
+        strMDMDrinks = request.form["drinks"]
+        if strMDMDrinks == "SOFTDRINKS 30.00":
+            drinksMDM = 30
+        elif strMDMDrinks == "COFFEE 40.00":
+            drinksMDM = 40
+        elif strMDMDrinks == "MANGO JUICE 50.00":
+            drinksMDM = 50
 
-        total = orders + patty + coles + hamegg + drinks
+        totalMDM = ordersMDM + pattyMDM + colesMDM + hameggMDM + drinksMDM
 
-        strOutput = "<h3>OFFICIAL RECEIPT</h3>"
-        strOutput += "Customer ID: " + strID + "<br>"
-        strOutput += "Customer Name: " + strName + "<br>"
-        strOutput += "Total Amount: " + str(total) + "<br>"
+        strMDMOutput = "<h3>OFFICIAL RECEIPT</h3>"
+        strMDMOutput += "Customer ID: " + strMDMID + "<br>"
+        strMDMOutput += "Customer Name: " + strMDMName + "<br>"
+        strMDMOutput += "Total Amount: " + str(totalMDM) + "<br>"
 
-        return strOutput
+        return strMDMOutput
     return render_template("act3-mod3-it106-mdm.html")
 
 if __name__ == "__main__":
