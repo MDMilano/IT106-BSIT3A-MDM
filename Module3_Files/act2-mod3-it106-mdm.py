@@ -2,7 +2,6 @@ from flask import Flask, render_template
 from flask import request
 appMDM = Flask(__name__)
 
-@appMDM.route('/')
 @appMDM.route('/', methods=["GET", "POST"])
 def indexMDM():
     if request.method == "POST":
