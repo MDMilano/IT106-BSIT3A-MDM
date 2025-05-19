@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3_Files/mp1-mod3-it106-mdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/mp1-mod3-it106-mdm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,5 +182,9 @@
       <updated>1745228377273</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gitignore updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

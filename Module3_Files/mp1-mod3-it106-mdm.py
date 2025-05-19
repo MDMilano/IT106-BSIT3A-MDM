@@ -9,12 +9,12 @@ def index():
         strMDMID = request.form["PatientID"]
         strMDMLName = request.form["LastName"]
         strMDMFName = request.form["FirstName"]
-        strMDMAge = int(request.form["Age"])
+        strMDMAge = request.form["Age"]
         strMDMRType = request.form["RoomType"]
-        strMDMRPDay = int(request.form["RatePerDay"])
-        strMDMNODays = int(request.form["NoOfDays"])
-        strMDMLCharges = int(request.form["LaboratoryCharges"])
-        strMDMECharges = int(request.form["ExtraCharges"])
+        strMDMRPDay = request.form["RatePerDay"]
+        strMDMNODays = request.form["NoOfDays"]
+        strMDMLCharges = request.form["LaboratoryCharges"]
+        strMDMECharges = request.form["ExtraCharges"]
 
         def w():
             strMDMRDescription = "Ward"
@@ -67,21 +67,22 @@ def index():
         strMDMRDesc = getSwitch(strMDMRType)
 
         strMDMAGName = ""
-        if strMDMAge >= 0 and strMDMAge <=2:
+        Age = int(strMDMAge)
+        if Age >= 0 and Age <=2:
             strMDMAGName = "Babies"
-        elif strMDMAge >= 3 and strMDMAge <=16:
+        elif Age >= 3 and Age <=16:
             strMDMAGName = "Children"
-        elif strMDMAge >= 17 and strMDMAge <=30:
+        elif Age >= 17 and Age <=30:
             strMDMAGName = "Young Adults"
-        elif strMDMAge >= 31 and strMDMAge <=45:
+        elif Age >= 31 and Age <=45:
             strMDMAGName = "Middle Aged Adults"
-        elif strMDMAge > 45:
+        elif Age > 45:
             strMDMAGName = "Old Adults"
         else:
             strMDMAGName = "Invalid Age"
 
-        RoomCharge  = strMDMRPDay * strMDMNODays
-        TotalAmount = RoomCharge + strMDMLCharges + strMDMECharges
+        RoomCharge  = float(strMDMRPDay) * float(strMDMNODays)
+        TotalAmount = RoomCharge + float(strMDMLCharges) + float(strMDMECharges)
         HealthInsurance = TotalAmount * 0.05
         PhilHealth = TotalAmount * 0.06
         SSS = TotalAmount * 0.07
