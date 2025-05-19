@@ -9,12 +9,12 @@ def index():
         strMDMID = request.form["PatientID"]
         strMDMLName = request.form["LastName"]
         strMDMFName = request.form["FirstName"]
-        strMDMAge = request.form["Age"]
+        strMDMAge = int(request.form["Age"])
         strMDMRType = request.form["RoomType"]
-        strMDMRPDay = request.form["RatePerDay"]
-        strMDMNODays = request.form["NoOfDays"]
-        strMDMLCharges = request.form["LaboratoryCharges"]
-        strMDMECharges = request.form["ExtraCharges"]
+        strMDMRPDay = int(request.form["RatePerDay"])
+        strMDMNODays = int(request.form["NoOfDays"])
+        strMDMLCharges = int(request.form["LaboratoryCharges"])
+        strMDMECharges = int(request.form["ExtraCharges"])
 
         def w():
             strMDMRDescription = "Ward"
@@ -67,22 +67,21 @@ def index():
         strMDMRDesc = getSwitch(strMDMRType)
 
         strMDMAGName = ""
-        intMDMAge = int(strMDMAge)
-        if intMDMAge >= 0 and intMDMAge <=2:
+        if strMDMAge >= 0 and strMDMAge <=2:
             strMDMAGName = "Babies"
-        elif intMDMAge >= 3 and intMDMAge <=16:
+        elif strMDMAge >= 3 and strMDMAge <=16:
             strMDMAGName = "Children"
-        elif intMDMAge >= 17 and intMDMAge <=30:
+        elif strMDMAge >= 17 and strMDMAge <=30:
             strMDMAGName = "Young Adults"
-        elif intMDMAge >= 31 and intMDMAge <=45:
+        elif strMDMAge >= 31 and strMDMAge <=45:
             strMDMAGName = "Middle Aged Adults"
-        elif intMDMAge > 45:
+        elif strMDMAge > 45:
             strMDMAGName = "Old Adults"
         else:
             strMDMAGName = "Invalid Age"
 
-        RoomCharge  = float(strMDMRPDay) * float(strMDMNODays)
-        TotalAmount = RoomCharge + float(strMDMLCharges) + float(strMDMECharges)
+        RoomCharge  = strMDMRPDay * strMDMNODays
+        TotalAmount = RoomCharge + strMDMLCharges + strMDMECharges
         HealthInsurance = TotalAmount * 0.05
         PhilHealth = TotalAmount * 0.06
         SSS = TotalAmount * 0.07

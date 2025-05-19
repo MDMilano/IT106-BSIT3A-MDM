@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="mp1-mod3 py and html done">
+    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="fix the decimal place to 2 decimal place">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module3_Files/act2-mod3-it106-mdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/act2-mod3-it106-mdm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3_Files/mp1-mod3-it106-mdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/mp1-mod3-it106-mdm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +48,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.act3-mod3-it106-mdm">
+  <component name="RunManager" selected="Python.mp1-mod3-it106-mdm">
     <configuration name="act1-mod3-it106-mdm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IT106-BSIT3A-MDM" />
       <option name="ENV_FILES" value="" />
@@ -161,9 +161,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mp1-mod3-it106-mdm" />
         <item itemvalue="Python.act3-mod3-it106-mdm" />
         <item itemvalue="Python.act2-mod3-it106-mdm" />
-        <item itemvalue="Python.mp1-mod3-it106-mdm" />
         <item itemvalue="Python.act1-mod3-it106-mdm" />
         <item itemvalue="Python.pre-exm-it106-mdm" />
       </list>
@@ -201,12 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1747652320209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fix the decimal place to 2 decimal place">
+      <option name="closed" value="true" />
+      <created>1747652513596</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747652513596</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comment spelling corrected" />
     <MESSAGE value="mp1-mod3 py and html done" />
-    <option name="LAST_COMMIT_MESSAGE" value="mp1-mod3 py and html done" />
+    <MESSAGE value="fix the decimal place to 2 decimal place" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the decimal place to 2 decimal place" />
   </component>
 </project>
