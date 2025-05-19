@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOSPITAL FORM ELEMENTS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="card-body">
+      <form action="#" method="POST" name="frmReceipt" id="frmReceipt">
+        <h2>HOSPITAL FORM</h2>
+        <br>
+
+        <!-- TEXT INPUT ELEMENTS -->
+        <div class="form-group">
+            <label for="PatientID">Patient ID:</label>
+            <input type="number" class="form-control"  name="PatientID" id="PatientID" placeholder="Enter patient id" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="LastName">Last Name:</label>
+            <input type="text" class="form-control"  name="LastName" id="LastName" placeholder="Enter last name" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="FirstName">First Name:</label>
+            <input type="text" class="form-control"  name="FirstName" id="FirstName" placeholder="Enter first name" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="Age">Age:</label>
+            <input type="number" class="form-control"  name="Age" id="Age" placeholder="Enter age" required>
+        </div>
+
+        <!-- SELECT OR DROPDOWN FOR ROOM TYPE -->
+        <br>
+        <div class="form-group">
+            <label for="RoomType">Room Type:</label>
+            <select class="form-control form-select" id="RoomType" name="RoomType" required>
+              <option>Select Room Type</option>
+              <option>W</option>
+              <option>SPR</option>
+              <option>PR</option>
+              <option>ER</option>
+              <option>ICU</option>
+              <option>NICU</option>
+              <option>PICU</option>
+              <option>IC</option>
+            </select>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="RatePerDay">Rate Per Day:</label>
+            <input type="number" class="form-control"  name="RatePerDay" id="RatePerDay" placeholder="Enter rate per day" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="NoOfDays">No. of Days:</label>
+            <input type="number" class="form-control"  name="NoOfDays" id="NoOfDays" placeholder="Enter no. of days" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="LaboratoryCharges">Laboratory Charges:</label>
+            <input type="number" class="form-control"  name="LaboratoryCharges" id="LaboratoryCharges" placeholder="Enter laboratory charges" required>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="ExtraCharges">Extra Charges:</label>
+            <input type="number" class="form-control"  name="ExtraCharges" id="ExtraCharges" placeholder="Enter extra charges" required>
+        </div>
+
+        <!--ACTION/COMMAND BUTTONS-->
+        <br>
+        <div class="form-group">
+            <button type="submit" class="form-control btn btn-primary mb-2" id="btnCompute">COMPUTE TOTAL AMOUNT</button>
+        </div>
+        
+      </form>
+  </div>
+</body>
+</html>
