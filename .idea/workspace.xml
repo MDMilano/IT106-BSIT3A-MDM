@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Module3_Files/act3-mod3-it106-mdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/act3-mod3-it106-mdm.py" afterDir="false" />
+    <list default="true" id="e98ab3f8-6fb7-4fb2-ada3-994fe1296ba6" name="Changes" comment="mp1-mod3 py and html done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module3_Files/act2-mod3-it106-mdm.py" beforeDir="false" afterPath="$PROJECT_DIR$/Module3_Files/act2-mod3-it106-mdm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     "Python.act1-mod3-it106-mdm.executor": "Run",
     "Python.act2-mod3-it106-mdm.executor": "Run",
     "Python.act3-mod3-it106-mdm.executor": "Run",
+    "Python.mp1-mod3-it106-mdm.executor": "Run",
     "Python.pre-exm-it106-mdm.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -113,6 +115,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="mp1-mod3-it106-mdm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IT106-BSIT3A-MDM" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Module3_Files" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Module3_Files/mp1-mod3-it106-mdm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="pre-exm-it106-mdm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="IT106-BSIT3A-MDM" />
       <option name="ENV_FILES" value="" />
@@ -138,8 +162,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.act3-mod3-it106-mdm" />
-        <item itemvalue="Python.act1-mod3-it106-mdm" />
         <item itemvalue="Python.act2-mod3-it106-mdm" />
+        <item itemvalue="Python.mp1-mod3-it106-mdm" />
+        <item itemvalue="Python.act1-mod3-it106-mdm" />
         <item itemvalue="Python.pre-exm-it106-mdm" />
       </list>
     </recent_temporary>
@@ -147,7 +172,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
       </set>
     </attachedChunks>
   </component>
@@ -160,6 +185,28 @@
       <option name="presentableId" value="Default" />
       <updated>1745228377273</updated>
     </task>
+    <task id="LOCAL-00001" summary="comment spelling corrected">
+      <option name="closed" value="true" />
+      <created>1747651940175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747651940175</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mp1-mod3 py and html done">
+      <option name="closed" value="true" />
+      <created>1747652320209</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747652320209</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="comment spelling corrected" />
+    <MESSAGE value="mp1-mod3 py and html done" />
+    <option name="LAST_COMMIT_MESSAGE" value="mp1-mod3 py and html done" />
   </component>
 </project>
