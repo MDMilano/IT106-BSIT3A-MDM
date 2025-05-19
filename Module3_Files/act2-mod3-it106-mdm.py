@@ -40,7 +40,7 @@ def indexMDM():
                     "Prelim Grade: " + dblMDMPre + "<br>" \
                     "Midterm Grade: " + dblMDMMid + "<br>" \
                     "Final Grade: " + dblMDMFin + "<br>" \
-                    "Subject Grade: " + str(dblMDMSGrade) + "<br>" \
+                    "Subject Grade: " + str("%.2f" % dblMDMSGrade) + "<br>" \
                     "Remarks: " + strMDMRemarks + "<br>" \
                     "Ratings: " + strMDMRatings + "<br>"
 
