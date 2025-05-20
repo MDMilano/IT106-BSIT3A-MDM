@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PIZZA ORDERING SYSTEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="card-body">
+        <form action="#" method="POST" name="frmOrder" id="frmOrder">
+            <h2>PIZZA ORDER FORM</h2>
+            <br>
+
+            <!-- TEXT INPUT ELEMENTS -->
+            <div class="form-group">
+                <label for="CustomerNumber">Customer Number:</label>
+                <input type="number" class="form-control"  name="CustomerNumber" id="CustomerNumber" placeholder="Enter customer number" required>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="LastName">Last Name:</label>
+                <input type="text" class="form-control"  name="LastName" id="LastName" placeholder="Enter last name" required>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="FirstName">First Name:</label>
+                <input type="text" class="form-control"  name="FirstName" id="FirstName" placeholder="Enter first name" required>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="MiddleName">Middle Name:</label>
+                <input type="text" class="form-control"  name="MiddleName" id="MiddleName" placeholder="Enter middle name" required>
+            </div>
+
+            <!-- RADIOBUTTONS FOR GENDER-->
+            <br>
+            <div class="form-group">
+                <fieldset class="form-group">
+                <legend>Gender:</legend>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="male" value="Male" checked>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                </fieldset>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="Birthday">Birthday:</label>
+                <input type="date" class="form-control"  name="Birthday" id="Birthday" placeholder="Enter birthday" required>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" class="form-control"  name="Email" id="Email" placeholder="Enter email" required>
+            </div>
+
+            <!-- RADIOBUTTONS FOR PIZZA SIZES-->
+            <br>
+            <div class="form-group">
+                <fieldset class="form-group">
+                    <legend>Select Pizza Sizes:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Size" id="regular" value="Regular 300.00" checked>
+                        <label class="form-check-label" for="regular">Regular 300.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Size" id="large" value="Large 500.00">
+                        <label class="form-check-label" for="large">Large 500.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Size" id="family" value="Family 800.00">
+                        <label class="form-check-label" for="family">Family 800.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Size" id="xl" value="Extra Large 1000.00">
+                        <label class="form-check-label" for="xl">Extra Large 1000.00</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- CHECKBOXES FOR EXTRA TOPPINGS -->
+            <br>
+            <div class="form-group">
+                <fieldset class="form-group">
+                    <legend>Select Extra Toppings:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Cheese 50.00" name="cheese" id="cheese" checked>
+                        <label class="form-check-label" for="cheese">Cheese 50.00</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Ham 60.00" name="ham" id="ham">
+                        <label class="form-check-label" for="ham">Ham 60.00</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Bacon 80.00" name="bacon" id="bacon">
+                        <label class="form-check-label" for="bacon">Bacon 80.00</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Pepperoni 100.00" name="pepperoni" id="pepperoni">
+                        <label class="form-check-label" for="pepperoni">Pepperoni 100.00</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- RADIOBUTTONS FOR PIZZA FLAVOR-->
+            <br>
+            <div class="form-group">
+                <fieldset class="form-group">
+                    <legend>Select Pizza Flavor:</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Flavor" id="hawaiian" value="Hawaiian 50.00" checked>
+                        <label class="form-check-label" for="hawaiian">Hawaiian 50.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Flavor" id="pcheese" value="Pepperoni and Cheese 100.00">
+                        <label class="form-check-label" for="pcheese">Pepperoni and Cheese 100.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Flavor" id="combi" value="Combination 150.00">
+                        <label class="form-check-label" for="combi">Combination 150.00</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Flavor" id="mchoice" value="Manager's Choice 200.00">
+                        <label class="form-check-label" for="mchoice">Manager's Choice 200.00</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!-- SELECT OR DROPDOWN FOR DRINKS -->
+            <br>
+            <div class="form-group">
+                <label for="drinks">Select Drinks:</label>
+                <select class="form-control form-select" id="drinks" name="Drinks" required>
+                    <option>Select One</option>
+                    <option>Softdrinks 30.00</option>
+                    <option>Mango Juice 35.00</option>
+                    <option>Pineapple Juice 40.00</option>
+                    <option>Hot Coffee 45.00</option>
+                </select>
+            </div>
+
+            <!--ACTION/COMMAND BUTTONS-->
+            <br>
+            <div class="form-group">
+                <button type="submit" class="form-control btn btn-primary mb-2" id="btnCompute">COMPUTE AMOUNT TO PAY</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
