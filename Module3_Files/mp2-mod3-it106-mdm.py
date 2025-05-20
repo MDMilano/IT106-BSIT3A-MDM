@@ -10,7 +10,7 @@ def index():
         strMDMLName = request.form["LastName"]
         strMDMFName = request.form["FirstName"]
         strMDMMName = request.form["MiddleName"]
-        strMDMGender = request.form["Gender"]
+        strMDMGender = request.form["gender"]
         strMDMEmail = request.form["Email"]
         strMDMCourse = request.form["Course"]
         strMDMTuition = request.form["Tuition"]
