@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 /.idea
 exam-files/.idea/
 /Module1_Files/.idea
 /Module2_Files/.idea
 /Module3_Files/.idea
 /Module4_Files/.idea
+=======
+.idea
+exam-files/.idea
+Module1_Files/.idea
+Module2_Files/.idea
+Module3_Files/.idea
+Module4-Files/.idea
+Module4-Files/__pycache__
+>>>>>>> 5bf57e3f39fc3f5cd370db3bf456d45ae4a6321b
