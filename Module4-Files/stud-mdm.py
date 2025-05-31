@@ -36,11 +36,11 @@ def create_stud():
     cursor = None
     try:
         #GET STUDENT INPUTS
-        strMDMID = request.form['StudentID']
+        strMDMSID = request.form['StudentID']
         strMDMLName = request.form['LastName']
         strMDMFName = request.form['FirstName']
         strMDMMName = request.form['MiddleName']
-        strMDMgender = request.form['gender']
+        strMDMGender = request.form['gender']
         strMDMBirthday = request.form['Birthday']
         strMDMAge = request.form['Age']
         strMDMCourse = request.form['Course']
@@ -51,11 +51,11 @@ def create_stud():
         if request.method == 'POST':
             #SAVE RECORD TO DATABASE
             sql = "INSERT INTO tbl_stud_info \
-                    (Student_ID, Last_Name, First_Name, Middle_Name, Home_Address, \
-                    Email_Address, Mobile_Number,User_Type,Status, Password) \
+                    (Student_ID, Last_Name, First_Name, Middle_Name, Gender, \
+                    Birthday,Age ,Course ,Home_Address, Email_Address) \
                     VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-            data = (strMDMID, strMDMLName, strMDMFName, strMDMMName, strMDMHomeAdd, strMDMEmailAdd,
-                    strMDMMobNo, strMDMUType,strMDMStatus, strMDMPassword)
+            data = (strMDMSID, strMDMLName, strMDMFName, strMDMMName, strMDMGender, strMDMBirthday,
+                    strMDMAge, strMDMCourse,strMDMHomeAdd, strMDMEmailAdd)
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.execute(sql, data)
@@ -117,24 +117,25 @@ def update_stud():
     cursor = None
     try:
         # GET STUDENT INPUTS
-        strMDMID = request.form['StudentID']
+        strMDMSID = request.form['StudentID']
         strMDMLName = request.form['LastName']
         strMDMFName = request.form['FirstName']
         strMDMMName = request.form['MiddleName']
+        strMDMGender = request.form['gender']
+        strMDMBirthday = request.form['Birthday']
+        strMDMAge = request.form['Age']
+        strMDMCourse = request.form['Course']
         strMDMHomeAdd = request.form['Address']
         strMDMEmailAdd = request.form['EmailAdd']
-        strMDMMobNo = request.form['MobileNo']
-        strMDMUType = request.form['usertype']
-        strMDMStatus = request.form['status']
 
         if request.method == 'POST':
             # SAVE RECORD TO DATABASE
             sql = "UPDATE tbl_stud_info SET \
-                    Last_Name=%s, First_Name=%s, Middle_Name=%s, Home_Address=%s, \
-                    Email_Address=%s, Mobile_Number=%s, User_Type=%s,Status=%s \
-                    WHERE User_ID=%s"
-            data = (strMDMLName, strMDMFName, strMDMMName, strMDMHomeAdd, strMDMEmailAdd,
-                    strMDMMobNo, strMDMUType, strMDMStatus, strMDMID)
+                    Last_Name=%s, First_Name=%s, Middle_Name=%s, Gender=%s, \
+                    Birthday=%s, Age=%s, Course=%s,Home_Address=%s, Email_Address=%s \
+                    WHERE Student_ID=%s"
+            data = (strMDMLName, strMDMFName, strMDMMName, strMDMGender, strMDMBirthday,
+                    strMDMAge, strMDMCourse, strMDMHomeAdd, strMDMEmailAdd, strMDMSID)
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.execute(sql, data)
@@ -165,7 +166,6 @@ def delete_stud(id):
     finally:
         cursor.close()
         conn.close()
-
 
 if __name__ == "__main__":
     app.run(debug=True)

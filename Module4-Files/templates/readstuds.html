@@ -54,9 +54,9 @@
                         <td>{{ stud['Home_Address'] }}</td>
                         <td>{{ stud['Email_Address'] }}</td>
 
-                        <td><a href="{{ url_for('.read_one_stud',id = stud['User_ID']) }}"><button class="btn btn-secondary">View</button></a></td>
-                        <td><a href="{{ url_for('.update_stud_view', id = stud['User_ID']) }}"><button class="btn btn-secondary">Edit</button></a></td>
-                        <td><a href="{{ url_for('.delete_stud', id = stud['User_ID']) }}"><button class="btn btn-secondary">Delete</button></a></td>
+                        <td><a href="{{ url_for('.read_one_stud',id = stud['Student_ID']) }}"><button class="btn btn-secondary">View</button></a></td>
+                        <td><a href="{{ url_for('.update_stud_view', id = stud['Student_ID']) }}"><button class="btn btn-secondary">Edit</button></a></td>
+                        <td><a href="{{ url_for('.delete_stud', id = stud['Student_ID']) }}"><button class="btn btn-secondary">Delete</button></a></td>
 
                     </tr>
                     {% endfor %}
