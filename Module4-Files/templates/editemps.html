@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Student Record</title>
+    <title>Edit Employee Record</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="card-body">
-        <form action="/update_stud" method="POST" name="frmStudent" id="frmStudent">
-            <h2>Edit Student Record</h2>
-            <p><a href="{{ url_for('.read_all_stud') }}"><button type="button" class="btn btn-secondary">Back to List</button></a></p>
+        <form action="/update_emp" method="POST" name="frmEmployee" id="frmEmployee">
+            <h2>Edit Employee Record</h2>
+            <p><a href="{{ url_for('.read_all_emp') }}"><button type="button" class="btn btn-secondary">Back to List</button></a></p>
             <br>
 
             <!-- TEXT INPUT ELEMENTS -->
             <div class="form-group">
-                <label for="StudentID">Student ID:</label>
-                <input type="text" class="form-control"  name="StudentID" id="StudentID" placeholder="Enter student ID" value="{{ row['Student_ID'] }}" required>
+                <label for="EmployeeID">Employee ID:</label>
+                <input type="text" class="form-control"  name="EmployeeID" id="EmployeeID" placeholder="Enter employee ID" value="{{ row['Employee_ID'] }}" required>
             </div>
 
             <br>
@@ -63,8 +63,8 @@
 
             <br>
             <div class="form-group">
-                <label for="Birthday">Birthday:</label>
-                <input type="date" class="form-control"  name="Birthday" id="Birthday" value="{{ row['Birthday'] }}" required>
+                <label for="DateHired">Date Hired:</label>
+                <input type="date" class="form-control"  name="DateHired" id="DateHired" value="{{ row['Date_Hired'] }}" required>
             </div>
 
             <br>
@@ -75,12 +75,12 @@
 
             <br>
             <div class="form-group">
-                <label for="Course">Select Course:</label>
-                <select class="form-control form-select" id="Course" name="Course" required>
-                    <option {% if row['Course'] == 'BSIT' %} selected {% endif %}>BSIT</option>
-                    <option {% if row['Course'] == 'BSCS' %} selected {% endif %}>BSCS</option>
-                    <option {% if row['Course'] == 'BSIS' %} selected {% endif %}>BSIS</option>
-                    <option {% if row['Course'] == 'BSCPE' %} selected {% endif %}>BSCPE</option>
+                <label for="Department">Select Department:</label>
+                <select class="form-control form-select" id="Department" name="Department" required>
+                    <option {% if row['Department'] == 'Finance' %} selected {% endif %}>Finance</option>
+                    <option {% if row['Department'] == 'Human Resources' %} selected {% endif %}>Human Resources</option>
+                    <option {% if row['Department'] == 'Information Technology' %} selected {% endif %}>Information Technology</option>
+                    <option {% if row['Department'] == 'Operations' %} selected {% endif %}>Operations</option>
                 </select>
             </div>
 

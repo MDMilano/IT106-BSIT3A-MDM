@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Add New Student</title>
+    <title>Add New Employee</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="card-body">
-        <form action="/create_stud" method="POST" name="frmStudent" id="frmStudent">
-            <h2>ADD NEW STUDENT</h2>
+        <form action="/create_emp" method="POST" name="frmEmployee" id="frmEmployee">
+            <h2>ADD NEW EMPLOYEE</h2>
             <br>
 
             <!-- TEXT INPUT ELEMENTS -->
             <div class="form-group">
-                <label for="StudentID">Student ID:</label>
-                <input type="text" class="form-control"  name="StudentID" id="StudentID" placeholder="Enter student id" required>
+                <label for="EmployeeID">Employee ID:</label>
+                <input type="text" class="form-control"  name="EmployeeID" id="EmployeeID" placeholder="Enter employee id" required>
             </div>
 
             <br>
@@ -59,8 +59,8 @@
 
             <br>
             <div class="form-group">
-                <label for="Birthday">Birthday:</label>
-                <input type="date" class="form-control"  name="Birthday" id="Birthday" placeholder="Enter birthday" required>
+                <label for="DateHired">Date Hired:</label>
+                <input type="date" class="form-control"  name="DateHired" id="DateHired" placeholder="Enter date hired" required>
             </div>
 
             <br>
@@ -71,13 +71,13 @@
 
             <br>
             <div class="form-group">
-                <label for="Course">Select Course:</label>
-                <select class="form-control form-select" id="Course" name="Course" required>
-                    <option>SELECT ONE</option>
-                    <option>BSIT</option>
-                    <option>BSCS</option>
-                    <option>BSIS</option>
-                    <option>BSCPE</option>
+                <label for="Department">Select Department:</label>
+                <select class="form-control form-select" id="Department" name="Department" required>
+                    <option>Select One</option>
+                    <option>Finance</option>
+                    <option>Human Resources</option>
+                    <option>Information Technology</option>
+                    <option>Operations</option>
                 </select>
             </div>
 
