@@ -36,7 +36,7 @@ def create_emp():
     cursor = None
     try:
         #GET EMPLOYEE INPUTS
-        strMDMSID = request.form['EmployeeID']
+        strMDMEID = request.form['EmployeeID']
         strMDMLName = request.form['LastName']
         strMDMFName = request.form['FirstName']
         strMDMMName = request.form['MiddleName']
@@ -54,7 +54,7 @@ def create_emp():
                     (Employee_ID, Last_Name, First_Name, Middle_Name, Gender, \
                     Date_Hired,Age ,Department ,Home_Address, Email_Address) \
                     VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-            data = (strMDMSID, strMDMLName, strMDMFName, strMDMMName, strMDMGender, strMDMDateHired,
+            data = (strMDMEID, strMDMLName, strMDMFName, strMDMMName, strMDMGender, strMDMDateHired,
                     strMDMAge, strMDMDepartment,strMDMHomeAdd, strMDMEmailAdd)
             conn = mysql.connect()
             cursor = conn.cursor()
@@ -117,7 +117,7 @@ def update_emp():
     cursor = None
     try:
         # GET EMPLOYEE INPUTSs
-        strMDMSID = request.form['EmployeeID']
+        strMDMEID = request.form['EmployeeID']
         strMDMLName = request.form['LastName']
         strMDMFName = request.form['FirstName']
         strMDMMName = request.form['MiddleName']
@@ -135,7 +135,7 @@ def update_emp():
                     Date_Hired=%s, Age=%s, Department=%s,Home_Address=%s, Email_Address=%s \
                     WHERE Employee_ID=%s"
             data = (strMDMLName, strMDMFName, strMDMMName, strMDMGender, strMDMDateHired,
-                    strMDMAge, strMDMDepartment, strMDMHomeAdd, strMDMEmailAdd, strMDMSID)
+                    strMDMAge, strMDMDepartment, strMDMHomeAdd, strMDMEmailAdd, strMDMEID)
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.execute(sql, data)
