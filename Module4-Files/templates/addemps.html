@@ -10,7 +10,7 @@
     <div class="card-body">
         <form action="/create_emp" method="POST" name="frmEmployee" id="frmEmployee">
             <h2>ADD NEW EMPLOYEE</h2>
-            <br>
+            <p><a href="{{ url_for('.read_all_emp') }}"><button type="button" class="btn btn-secondary">Back to List</button></a></p>
 
             <!-- TEXT INPUT ELEMENTS -->
             <div class="form-group">

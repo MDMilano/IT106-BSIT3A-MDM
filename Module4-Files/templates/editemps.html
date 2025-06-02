@@ -11,12 +11,11 @@
         <form action="/update_emp" method="POST" name="frmEmployee" id="frmEmployee">
             <h2>Edit Employee Record</h2>
             <p><a href="{{ url_for('.read_all_emp') }}"><button type="button" class="btn btn-secondary">Back to List</button></a></p>
-            <br>
 
             <!-- TEXT INPUT ELEMENTS -->
             <div class="form-group">
                 <label for="EmployeeID">Employee ID:</label>
-                <input type="text" class="form-control"  name="EmployeeID" id="EmployeeID" placeholder="Enter employee ID" value="{{ row['Employee_ID'] }}" required>
+                <input type="text" class="form-control"  name="EmployeeID" id="EmployeeID" placeholder="Enter employee ID" value="{{ row['Employee_ID'] }}" readonly>
             </div>
 
             <br>
